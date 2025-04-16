@@ -1,38 +1,40 @@
 .post {
-	background: var(--gray-800);
-	border-radius: 8px;
-	padding: 2.5rem;
+  background: var(--gray-800);
+  border-radius: 8px;
+  padding: 2.5rem;
 }
 
 /* Os posts tem espaçamento entre si, apenas quando há outros */
-.post + .post { /*Quero estilizar todo post que antes dele tenha um post*/
-	margin-top: 2rem;
+.post + .post {
+  /*Quero estilizar todo post que antes dele tenha um post*/
+  margin-top: 2rem;
 }
 
-.post > header { /* Pega só o header de primeiro nível */
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+.post > header {
+  /* Pega só o header de primeiro nível */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .post > header time {
-	font-size: 0.875rem;
-	color: var(--gray-400);
+  font-size: 0.875rem;
+  color: var(--gray-400);
 }
 
 .author {
-	display: flex;
-	align-items: center;
-	gap: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .authorInfo {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .authorInfo strong {
-	color: var(--gray-100);
+  color: var(--gray-100);
   line-height: 1.6;
 }
 
@@ -51,23 +53,23 @@
 }
 
 .content {
-	line-height: 1.6;
-	color: var(--gray-300);
-	margin-top: 1.5rem;
+  line-height: 1.6;
+  color: var(--gray-300);
+  margin-top: 1.5rem;
 }
 
 .content p {
-	margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .content a {
-	font-weight: bold;
-	color: var(--green-500);
-	text-decoration: none;
+  font-weight: bold;
+  color: var(--green-500);
+  text-decoration: none;
 }
 
 .content a:hover {
-	color: var(--green-300)
+  color: var(--green-300);
 }
 
 .commentForm {
@@ -95,18 +97,18 @@
   margin-top: 1rem;
 }
 
-footer {
+.commentForm footer {
   visibility: hidden;
   max-height: 0;
 }
 
 /*focs-within: se houver um foco em qql input, textarea, ou qql elemento detro do .comment-form, eu quero aplica o estilo*/
-form:focus-within footer{
+.commentForm form:focus-within footer {
   visibility: visible;
   max-height: none;
 }
 
-.commentForm button[type=submit] {
+.commentForm button[type='submit'] {
   padding: 1rem 1.5rem;
   margin-top: 1rem;
   border-radius: 8px;
@@ -119,7 +121,7 @@ form:focus-within footer{
   transition: background-color 0.1s;
 }
 
-.commentForm button[type=submit]:hover {
+.commentForm button[type='submit']:hover {
   background: var(--green-300);
 }
 
