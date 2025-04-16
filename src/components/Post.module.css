@@ -103,7 +103,7 @@
 }
 
 /*focs-within: se houver um foco em qql input, textarea, ou qql elemento detro do .comment-form, eu quero aplica o estilo*/
-.commentForm form:focus-within footer {
+.commentForm:focus-within footer {
   visibility: visible;
   max-height: none;
 }
