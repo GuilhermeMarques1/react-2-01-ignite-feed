@@ -2,7 +2,11 @@ import { ThumbsUp, Trash } from 'phosphor-react'
 import styles from './Comment.module.css'
 import { Avatar } from './Avatar'
 
-export function Comment({ content }) {
+export function Comment({ content, onDeleteComment }) {
+  function handleDeleteComment() {
+    onDeleteComment(content)
+  }
+
   return (
     <div className={styles.comment}>
       <Avatar hasBorder={false} src="https://github.com/guilhermemarques1.png" />
@@ -16,7 +20,7 @@ export function Comment({ content }) {
             </div>
 
             {/* Para button que é apenas um ícone ou que não tem texto dentro dele, para acessibilidade é bom ter um title */}
-            <button title="Deleter comentário">
+            <button title="Deleter comentário" onClick={handleDeleteComment} >
               <Trash size={20}/>
             </button>
           </header>
