@@ -3,7 +3,12 @@ import styles from './Comment.module.css'
 import { Avatar } from './Avatar'
 import { useState } from 'react'
 
-export function Comment({ content, onDeleteComment }) {
+interface CommentProps {
+  content: string
+  onDeleteComment: (comment: string) => void
+}
+
+export function Comment({ content, onDeleteComment }: CommentProps) {
   const [likeCount, setLikeCount] = useState(0)
 
   function handleDeleteComment() {
@@ -25,7 +30,7 @@ export function Comment({ content, onDeleteComment }) {
           <header>
             <div className={styles.authorAndTime}>
               <strong>Guilherme Marques</strong>
-              <time title="15 de abril de 2025" datetime="2025-04-15 00:07:35">Cerca de 1h atrás</time>
+              <time title="15 de abril de 2025" dateTime="2025-04-15 00:07:35">Cerca de 1h atrás</time>
             </div>
 
             {/* Para button que é apenas um ícone ou que não tem texto dentro dele, para acessibilidade é bom ter um title */}
